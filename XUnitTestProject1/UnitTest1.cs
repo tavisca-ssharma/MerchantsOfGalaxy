@@ -14,9 +14,10 @@ namespace XUnitTestProject1
         [Fact]
         public void IsubtractionVX()
         {
+            var moga = new Class1();
             string input = "IV";
             string outputexpected = "4";
-            string output = Finaloutput(input);
+            string output = moga.RomanToDecimal("IV");
             Assert.Equal(output, outputexpected);
         }
 
@@ -25,7 +26,7 @@ namespace XUnitTestProject1
         {
             string input = "ID";
             string outputexpected = "Incorrect Format";
-            string output = Finaloutput(input);
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -33,8 +34,8 @@ namespace XUnitTestProject1
         public void XsubtractionLC()
         {
             string input = "XC";
-            string outputexpected = "40";
-            string output = Finaloutput(input);
+            string outputexpected = "90";
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -43,7 +44,7 @@ namespace XUnitTestProject1
         {
             string input = "XM";
             string outputexpected = "Incorrect Format";
-            string output = Finaloutput(input);
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -51,17 +52,8 @@ namespace XUnitTestProject1
         public void CsubtractionDM()
         {
             string input = "CD";
-            string outputexpected = "50";
-            string output = Finaloutput(input);
-            Assert.Equal(output, outputexpected);
-        }
-
-        [Fact]
-        public void CsubtractionIVXL()
-        {
-            string input = "CX";
-            string outputexpected = "Incorrect Format";
-            string output = Finaloutput(input);
+            string outputexpected = "400";
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -70,7 +62,7 @@ namespace XUnitTestProject1
         {
             string input = "VX";
             string outputexpected = "Incorrect Format";
-            string output = Finaloutput(input);
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -79,7 +71,7 @@ namespace XUnitTestProject1
         {
             string input = "IX";
             string outputexpected = "9";
-            string output = Finaloutput(input);
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -88,7 +80,7 @@ namespace XUnitTestProject1
         {
             string input = "III";
             string outputexpected = "3";
-            string output = Finaloutput(input);
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -97,19 +89,8 @@ namespace XUnitTestProject1
         {
             string input = "DDD";
             string outputexpected = "Incorrect Format";
-            string output = Finaloutput(input);
+            string output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
-        }
-
-        public string FinalOutput(string input)
-        {
-            char[] A = input.ToCharArray();
-            string output = "";
-            for (int i = 0; i < A.Length; i++)
-            {
-                output = mog.SendKeyPress(A[i]);
-            }
-            return output;
         }
     }
 }
