@@ -6,15 +6,15 @@ namespace XUnitTestProject1
 {
     public class MOGTest
     {
-        Class1 mog;
+        Galaxy mog;
         public MOGTest()
         {
-            mog = new Class1();
+            mog = new Galaxy();
         }
         [Fact]
         public void IsubtractionVX()
         {
-            var moga = new Class1();
+            var moga = new Galaxy();
             string input = "IV";
             string outputexpected = "4";
             string output = moga.RomanToDecimal("IV");

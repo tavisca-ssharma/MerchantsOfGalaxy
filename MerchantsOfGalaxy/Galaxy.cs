@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace MerchantsOfGalaxy
 {
-    public class Class1
+    public class Galaxy
     {
         public static Dictionary<char, int> romanLiteralDict = new Dictionary<char, int>()
         {
