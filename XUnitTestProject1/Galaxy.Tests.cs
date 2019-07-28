@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using FluentAssertions;
 using MerchantsOfGalaxy;
-namespace XUnitTestProject1
+namespace Merchant
 {
     public class MOGTest
     {
@@ -16,8 +16,8 @@ namespace XUnitTestProject1
         {
             var moga = new Galaxy();
             string input = "IV";
-            string outputexpected = "4";
-            string output = moga.RomanToDecimal("IV");
+            int outputexpected = 4;
+            int output = moga.RomanToDecimal("IV");
             Assert.Equal(output, outputexpected);
         }
 
@@ -25,8 +25,8 @@ namespace XUnitTestProject1
         public void IsubtractionLCDM()
         {
             string input = "ID";
-            string outputexpected = "Incorrect Format";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = -1;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -34,8 +34,8 @@ namespace XUnitTestProject1
         public void XsubtractionLC()
         {
             string input = "XC";
-            string outputexpected = "90";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = 90;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -43,8 +43,8 @@ namespace XUnitTestProject1
         public void XsubtractionIVDM()
         {
             string input = "XM";
-            string outputexpected = "Incorrect Format";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = -1;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -52,8 +52,8 @@ namespace XUnitTestProject1
         public void CsubtractionDM()
         {
             string input = "CD";
-            string outputexpected = "400";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = 400;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -61,8 +61,8 @@ namespace XUnitTestProject1
         public void VLDsubtraction()
         {
             string input = "VX";
-            string outputexpected = "Incorrect Format";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = -1;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -70,8 +70,8 @@ namespace XUnitTestProject1
         public void SmallLargeSubtraction()
         {
             string input = "IX";
-            string outputexpected = "9";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = 9;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -79,8 +79,8 @@ namespace XUnitTestProject1
         public void IXCMRepetition()
         {
             string input = "III";
-            string outputexpected = "3";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = 3;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
 
@@ -88,8 +88,8 @@ namespace XUnitTestProject1
         public void DLVRepetition()
         {
             string input = "DDD";
-            string outputexpected = "Incorrect Format";
-            string output = mog.RomanToDecimal(input);
+            int outputexpected = -1;
+            int output = mog.RomanToDecimal(input);
             Assert.Equal(output, outputexpected);
         }
     }
